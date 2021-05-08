@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -28,9 +29,9 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        val ResetBtn = findViewById<Button>(R.id.button4)
-        ResetBtn.setOnClickListener {
-            Toast.makeText(this,"Reset Complete", Toast.LENGTH_SHORT).show()
+        val MenuListBtn = findViewById<Button>(R.id.button4)
+        MenuListBtn.setOnClickListener {
+            startActivity(Intent(this@MainActivity, MoviesList::class.java))
 
         }
 
