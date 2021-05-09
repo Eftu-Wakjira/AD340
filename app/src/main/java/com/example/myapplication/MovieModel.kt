@@ -1,12 +1,12 @@
 package com.example.myapplication
 
-class MovieModel(title: String?, genre: String?, year: String?) {
+class MovieModel(title: String?, year: String?, image: String?) {
     private var title: String
-    private var genre: String
+    private var image: String
     private var year: String
     init {
         this.title = title!!
-        this.genre = genre!!
+        this.image = image!!
         this.year = year!!
     }
     fun getTitle(): String? {
@@ -21,10 +21,10 @@ class MovieModel(title: String?, genre: String?, year: String?) {
     fun setYear(year: String?) {
         this.year = year!!
     }
-    fun getGenre(): String? {
-        return genre
+    fun getImage(): String? {
+        return image
     }
-    fun setGenre(genre: String?) {
-        this.genre = genre!!
+    fun setImage(genre: String?) {
+        this.image = image!!
     }
 }

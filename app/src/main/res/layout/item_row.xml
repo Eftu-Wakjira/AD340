@@ -18,8 +18,8 @@
             android:textColor="@android:color/white"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:layout_alignParentLeft="true"
-            android:layout_toLeftOf="@+id/year" />
+            android:layout_toLeftOf="@+id/year"
+            android:layout_alignParentLeft="true" />
         <TextView
             android:id="@+id/year"
             android:layout_width="wrap_content"
