@@ -27,4 +27,6 @@ class MovieModel(title: String?, year: String?, image: String?) {
     fun setImage(genre: String?) {
         this.image = image!!
     }
+
+
 }
