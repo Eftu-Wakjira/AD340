@@ -1,10 +1,12 @@
 package com.example.myapplication
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
 
 class MoviesList : AppCompatActivity() {
     private val movieList = ArrayList<MovieModel>()
@@ -14,19 +16,22 @@ class MoviesList : AppCompatActivity() {
     setContentView(R.layout.activity_movies_list)
 
        val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
-       moviesAdapter = MoviesAdapter(movieList)
+       moviesAdapter = MoviesAdapter{ view -> adapterOnClick(view) }
        val layoutManager = LinearLayoutManager(applicationContext)
        recyclerView.layoutManager = layoutManager
        recyclerView.itemAnimator = DefaultItemAnimator()
        recyclerView.adapter = moviesAdapter
 
-
        val actionbar = supportActionBar
-       actionbar!!.title = "Movies List"
-       actionbar.setDisplayHomeAsUpEnabled(true)
+       "Movies List".also { actionbar!!.title = it }
+       val displayHomeAsUpEnabled = actionbar?.setDisplayHomeAsUpEnabled(true)
 
 
    }
+
+    private fun adapterOnClick(view: Int) {
+
+    }
 
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
