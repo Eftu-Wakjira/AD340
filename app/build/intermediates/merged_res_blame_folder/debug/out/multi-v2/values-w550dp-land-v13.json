@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Rawi\\AndroidStudioProjects\\MyApplication2b\\MyApplication2b\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w550dp-land-v13\\values-w550dp-land-v13.xml",
+            "outputFile": "C:\\Users\\Rawi\\AndroidStudioProjects\\MyApplication2d\\MyApplication2b\\MyApplication2b\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w550dp-land-v13\\values-w550dp-land-v13.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Rawi\\.gradle\\caches\\transforms-2\\files-2.1\\9687ea34c46388a4b530a2c7463f20c4\\material-1.3.0\\res\\values-w550dp-land-v13\\values-w550dp-land-v13.xml",
