@@ -1,12 +1,10 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="edit_message">Name</string>
-    <string name="button_reset">Resnet</string>
-    <string name="button_main">Main Menu</string>
     <string name="button_send">Send</string>
-    <string name="button_help">Help</string>
-    <string name="button_new">New</string>
-    <string name="title_bar">title_bar</string>
+    <string name="button_main">Main Menu</string>
+    <string name="button_help">TrafficCamMaps</string>
+    <string name="button_new">Traffic Cams</string>
     <string name="button_MoviesList">Movies List</string>
     <string name="title_activity_movie_model">MovieModel</string>
     <!-- Strings used for fragments for navigation -->
@@ -19,4 +17,5 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="todo">TODO</string>
     <string name="image_movie">movie image</string>
+    <string name="Image_trafficcam">Traffic Cam</string>
 </resources>

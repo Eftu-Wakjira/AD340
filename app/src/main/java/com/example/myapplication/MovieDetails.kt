@@ -23,12 +23,12 @@ class MovieDetails: AppCompatActivity() {
         val actor = findViewById<TextView>(R.id.actor)
         val description = findViewById<TextView>(R.id.description)
 
-      //  val movie = movies[position]
-      //  title.text = movie[0]
-      //  year.text = movie[1]
-     //   actor.text = movie[2]
-      //  Picasso.get().load(movie[3]).into(movieimage)
-      //  description.text = movie[4]
+
+       title.text = message?.get(0)
+        year.text = message?.get(1)
+        actor.text = message?.get(2)
+       Picasso.get().load(message?.get(3)).into(movieimage)
+        description.text = message?.get(4)
 
     }
 }

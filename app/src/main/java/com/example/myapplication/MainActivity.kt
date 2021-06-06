@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         }
         val NewBtn = findViewById<Button>(R.id.button3)
         NewBtn.setOnClickListener {
-            Toast.makeText(this,"Creating New", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this@MainActivity, TrafficAdapter::class.java))
 
         }
 
@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
 
         val HelpBtn = findViewById<Button>(R.id.button5)
         HelpBtn.setOnClickListener {
-            Toast.makeText(this,"Help is on the way!", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this@MainActivity, TrafficCamMap::class.java))
 
         }
 

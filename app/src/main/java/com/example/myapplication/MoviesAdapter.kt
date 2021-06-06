@@ -31,19 +31,25 @@ internal class MoviesAdapter(private val showMovie: (pos: Int) -> Unit) :
         init {
             view.setOnClickListener(this)
             val pos: Int = adapterPosition
-            showMovie(pos)
+         //   showMovie(pos)
 
         }
 
-      override fun onClick(v: View?) {
-         TODO("Not yet implemented")
-       }
+     override fun onClick(v: View?) {
+         var bindingAdapterPosition =0
+          val position = bindingAdapterPosition
+          if (position != RecyclerView.NO_POSITION){
+            //  listener.MoviesAdapter(position)
+          }
+      }
 
     }
 
     interface OnItemClickListener {
-       fun onItemClick(position: Int)
+       fun MoviesAdapter(position: Int)
     }
+
+
     @NonNull
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val itemView = LayoutInflater.from(parent.context)
