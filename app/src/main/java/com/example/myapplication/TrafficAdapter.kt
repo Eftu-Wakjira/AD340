@@ -1,6 +1,5 @@
 package com.example.myapplication
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -48,7 +47,6 @@ class TrafficAdapter : AppCompatActivity() {
         0,
         values
     ) {
-        @SuppressLint("ViewHolder")
         override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
             val inflater = context
                 .getSystemService(LAYOUT_INFLATER_SERVICE) as LayoutInflater

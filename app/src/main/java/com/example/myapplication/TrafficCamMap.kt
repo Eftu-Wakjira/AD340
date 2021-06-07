@@ -23,7 +23,7 @@ import com.google.android.gms.maps.model.MarkerOptions
 import org.json.JSONException
 import java.util.*
 
-const val PERMISSION_REQUEST_LOCATION = 0
+const val PERMISSION_REQUEST_LOCATION = 9
 class TrafficCamMap : AppCompatActivity(), OnMapReadyCallback {
     private lateinit var fusedLocationClient: FusedLocationProviderClient
     private var gMap: GoogleMap? = null
@@ -46,7 +46,7 @@ class TrafficCamMap : AppCompatActivity(), OnMapReadyCallback {
         mapFragment?.getMapAsync { googleMap ->
 
             gMap = googleMap
-            Log.d("LOCATION", "map object available")
+            Log.d("LOCATION", "has map")
 
 
             checkLocationPermission()
@@ -61,15 +61,15 @@ class TrafficCamMap : AppCompatActivity(), OnMapReadyCallback {
         Log.d("LOCATION", "checkPermission")
         if ( ContextCompat.checkSelfPermission(this@TrafficCamMap, ACCESS_COARSE_LOCATION) ==
             PackageManager.PERMISSION_GRANTED) {
-            Log.d("LOCATION", "Allowed")
+            Log.d("LOCATION", "already granted")
             fusedLocationClient.lastLocation
                 .addOnSuccessListener { location : Location? ->
                     Log.d("LOCATION", location.toString())
 
                     if (location == null) {
                         val tmpLocation = Location(LocationManager.GPS_PROVIDER)
-                        tmpLocation.latitude = 47.6060531
-                        tmpLocation.longitude = -122.3321
+                        tmpLocation.latitude = 47.82395
+                        tmpLocation.longitude = -122.29243
                         updateMap(tmpLocation)
                     }
 
@@ -77,7 +77,7 @@ class TrafficCamMap : AppCompatActivity(), OnMapReadyCallback {
                 }
 
         } else {
-            Log.d("LOCATION", "Request Location")
+            Log.d("LOCATION", "should request")
             if (ActivityCompat.shouldShowRequestPermissionRationale(this@TrafficCamMap,
                     ACCESS_COARSE_LOCATION)) {
                 ActivityCompat.requestPermissions(this@TrafficCamMap,
@@ -89,16 +89,17 @@ class TrafficCamMap : AppCompatActivity(), OnMapReadyCallback {
         }
     }
 
-    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>,grantResults: IntArray
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<String>,
+        grantResults: IntArray
     ) {
         if (requestCode == PERMISSION_REQUEST_LOCATION) {
 
             if (grantResults.size == 1 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
 
-                Log.d("LOCATION", "Approved")
-                Toast.makeText(this, "Location Access Approved", Toast.LENGTH_SHORT).show()
-
-
+                Log.d("LOCATION", "granted")
+                Toast.makeText(this, "Permission Granted", Toast.LENGTH_SHORT).show()
                 if (ActivityCompat.checkSelfPermission(
                         this,
                         Manifest.permission.ACCESS_FINE_LOCATION
@@ -123,15 +124,13 @@ class TrafficCamMap : AppCompatActivity(), OnMapReadyCallback {
 
     private fun CamData(dataUrl: String?) {
         val queue = Volley.newRequestQueue(this)
-        val jsonReq = JsonObjectRequest(Request.Method.GET, TrafficCams.dataUrl, null, { response ->
+        val jsonReq = JsonObjectRequest(Request.Method.GET, dataUrl, null, { response ->
             Log.d("CAMERAS", response.toString())
             try {
-                val features = response.getJSONArray("Features")
+                val features = response.getJSONArray("Features") // top-level node
                 for (i in 1 until features.length()) {
                     val point = features.getJSONObject(i)
                     val pointCoords = point.getJSONArray("PointCoordinate")
-
-
                     val camera = point.getJSONArray("Cameras").getJSONObject(0)
                     val c = TrafficCams(
                         camera.getString("Description"),
@@ -141,7 +140,7 @@ class TrafficCamMap : AppCompatActivity(), OnMapReadyCallback {
                     )
                     CamData.add(c)
                 }
-
+                showMarkers()
             } catch (e: JSONException) {
             }
         }) { error -> Log.d("JSON", "Error: " + error.message) }
@@ -153,7 +152,7 @@ class TrafficCamMap : AppCompatActivity(), OnMapReadyCallback {
         Log.d("LOCATION", "updateMap")
         if (location != null) {
             Log.d("LOCATION", "move map")
-            gMap?.setMinZoomPreference(10f)
+            gMap?.setMinZoomPreference(12f)
             gMap?.apply {
                 val position = LatLng(location.latitude, location.longitude)
                 addMarker(
@@ -184,7 +183,9 @@ class TrafficCamMap : AppCompatActivity(), OnMapReadyCallback {
         }
     }
 
-
+    private fun showToast(text: String?) {
+        Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
+    }
 
     override fun onMapReady(p0: GoogleMap) {
         TODO("Not yet implemented")

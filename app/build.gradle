@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'com.google.secrets_gradle_plugin' version '0.5'
 }
 
 android {
@@ -51,6 +52,7 @@ dependencies {
     implementation 'com.google.maps.android:android-maps-utils:2.2.3'
     implementation 'com.google.maps.android:maps-utils-ktx:2.4.0'
     implementation 'com.google.android.gms:play-services-location:15.0.1'
+
 
 
 
