@@ -42,13 +42,13 @@ class MainActivity : AppCompatActivity() {
 
         mPreferences = getSharedPreferences(sharedPrefFile, MODE_PRIVATE)
 
-        mNameField = findViewById(R.id.userName)
+        mNameField = findViewById(R.id.displayname)
         mEmailField = findViewById(R.id.email)
         mPassword = findViewById(R.id.password)
 
-        mNameField.setText(mPreferences.getString("username", "User Name"))
-        mEmailField.setText(mPreferences.getString("email", "email"))
-        mPassword.setText(mPreferences.getString("password", "password"))
+        mNameField.setText(mPreferences.getString("username", ""))
+        mEmailField.setText(mPreferences.getString("email", ""))
+        mPassword.setText(mPreferences.getString("password", ""))
 
 
         val MainBtn = findViewById<Button>(R.id.button2)
