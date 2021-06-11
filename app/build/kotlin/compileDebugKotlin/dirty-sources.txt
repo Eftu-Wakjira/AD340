@@ -1,5 +1,0 @@
-C:\Users\Rawi\AndroidStudioProjects\MyApplication2d\MyApplication2b\MyApplication2b\app\src\main\java\com\example\myapplication\MoviesAdapter.kt
-C:\Users\Rawi\AndroidStudioProjects\MyApplication2d\MyApplication2b\MyApplication2b\app\src\main\java\com\example\myapplication\MoviesList.kt
-C:\Users\Rawi\AndroidStudioProjects\MyApplication2d\MyApplication2b\MyApplication2b\app\src\main\java\com\example\myapplication\MovieDetails.kt
-C:\Users\Rawi\AndroidStudioProjects\MyApplication2d\MyApplication2b\MyApplication2b\app\src\main\java\com\example\myapplication\MovieModel.kt
-C:\Users\Rawi\AndroidStudioProjects\MyApplication2d\MyApplication2b\MyApplication2b\app\src\main\java\com\example\myapplication\MainActivity.kt
