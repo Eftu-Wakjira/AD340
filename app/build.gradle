@@ -1,8 +1,12 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+
     id ('com.google.secrets_gradle_plugin') version '0.6'
     id   'com.google.gms.google-services'
+
+
+
 
 }
 
@@ -50,6 +54,7 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
    // implementation 'com.android.support:recyclerview-v7:28.0.0'
     implementation "androidx.cardview:cardview:1.0.0"
     implementation 'com.squareup.picasso:picasso:2.71828'
@@ -62,8 +67,5 @@ dependencies {
 
     implementation 'com.google.firebase:firebase-auth'
     implementation 'com.google.firebase:firebase-firestore'
-
-
-
 
 }

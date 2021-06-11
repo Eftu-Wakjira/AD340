@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "C:\\Users\\Rawi\\AndroidStudioProjects\\MyApplication2d\\MyApplication2b\\MyApplication2b\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_row.xml.flat",
+        "source": "C:\\Users\\Rawi\\AndroidStudioProjects\\MyApplication2d\\MyApplication2b\\MyApplication2b\\app\\src\\main\\res\\layout\\item_row.xml"
+    },
+    {
+        "merged": "C:\\Users\\Rawi\\AndroidStudioProjects\\MyApplication2d\\MyApplication2b\\MyApplication2b\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Rawi\\AndroidStudioProjects\\MyApplication2d\\MyApplication2b\\MyApplication2b\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Rawi\\AndroidStudioProjects\\MyApplication2d\\MyApplication2b\\MyApplication2b\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_movies_list.xml.flat",
+        "source": "C:\\Users\\Rawi\\AndroidStudioProjects\\MyApplication2d\\MyApplication2b\\MyApplication2b\\app\\src\\main\\res\\layout\\activity_movies_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\Rawi\\AndroidStudioProjects\\MyApplication2d\\MyApplication2b\\MyApplication2b\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_moviedetails.xml.flat",
+        "source": "C:\\Users\\Rawi\\AndroidStudioProjects\\MyApplication2d\\MyApplication2b\\MyApplication2b\\app\\src\\main\\res\\layout\\activity_moviedetails.xml"
+    },
+    {
+        "merged": "C:\\Users\\Rawi\\AndroidStudioProjects\\MyApplication2d\\MyApplication2b\\MyApplication2b\\app\\build\\intermediates\\res\\merged\\debug\\layout_linearlayout.xml.flat",
+        "source": "C:\\Users\\Rawi\\AndroidStudioProjects\\MyApplication2d\\MyApplication2b\\MyApplication2b\\app\\src\\main\\res\\layout\\linearlayout.xml"
+    }
+]

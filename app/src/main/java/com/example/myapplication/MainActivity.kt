@@ -1,8 +1,11 @@
 package com.example.myapplication
 
+
 import android.R.attr.password
 import android.content.Intent
 import android.content.SharedPreferences
+
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.util.Log
@@ -63,9 +66,9 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        val MenuListBtn = findViewById<Button>(R.id.button4)
-        MenuListBtn.setOnClickListener {
-            startActivity(Intent(this@MainActivity, MoviesList::class.java))
+        val ResetBtn = findViewById<Button>(R.id.button4)
+        ResetBtn.setOnClickListener {
+            Toast.makeText(this,"Reset Complete", Toast.LENGTH_SHORT).show()
 
         }
 
@@ -162,6 +165,5 @@ class MainActivity : AppCompatActivity() {
     }
 
 }
-
 
 
