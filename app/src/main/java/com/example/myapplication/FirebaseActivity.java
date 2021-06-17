@@ -32,7 +32,6 @@ public class FirebaseActivity extends AppCompatActivity {
 
     private DatabaseReference myRef;
 
-
     ListView userList;
     UserListAdapter listAdapter;
     ArrayList<User> userData = new ArrayList<>();
@@ -41,10 +40,6 @@ public class FirebaseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_firebase);
-
-        // Toolbar toolbar = findViewById(R.id.toolbar);
-        //  setSupportActionBar(toolbar);
-        //   getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
         FirebaseUser currentUser = mAuth.getCurrentUser();
@@ -130,7 +125,7 @@ public class FirebaseActivity extends AppCompatActivity {
             TextView title = rowView.findViewById(R.id.item_title);
             title.setText(values.get(position).username);
             TextView subtitle = rowView.findViewById(R.id.item_subtitle);
-            // subtitle.setText(String.format("Updated: %s", values.get(position).updated));
+
             subtitle.setText("Updated: " + values.get(position).updated);
 
             return rowView;
