@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="100dp"
     android:layout_margin="8dp"
-    app:cardBackgroundColor="@android:color/holo_red_dark">
+    app:cardBackgroundColor="@color/purple_500">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -17,18 +17,28 @@
             android:layout_toStartOf="@+id/year"
             android:textColor="@android:color/white"
             android:textSize="16sp"
-            android:textStyle="bold"
-            android:layout_toLeftOf="@+id/year"
-            android:layout_alignParentLeft="true" />
+            android:textStyle="bold" />
         <TextView
             android:id="@+id/year"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:textColor="@android:color/white"
-            android:layout_alignParentRight="true" />
+            android:textColor="@android:color/white" />
         <TextView
-            android:id="@+id/genre"
+            android:id="@+id/actor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:textColor="@android:color/white" />
+
+        <ImageView
+            android:id="@+id/movieimage"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/image_movie" />
+
+        <TextView
+            android:id="@+id/description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
